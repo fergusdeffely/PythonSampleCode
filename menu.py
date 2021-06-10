@@ -12,26 +12,28 @@ def showMenu():
     print("4. Option four")
     print("5. Exit\n")
     
-    selection = int(input("Please choose an option (1-5):"))
-    return selection
+    return input("Please choose an option (1-5): ")
 
-selection = 0
+selection = "0"
 
-while(selection != 5):
+while(selection != "5"):
     selection = showMenu()
     clearScreen()
 #    print(f"selection = {selection}")
-    if(selection == 1):
+    if(selection == "1"):
         print("You selected Option one!\n")
         input("Return to continue...")
-    elif(selection == 2):
+    elif(selection == "2"):
         print("You selected Option two!\n")
         input("Return to continue...")
-    elif(selection == 3):
+    elif(selection == "3"):
         print("You selected Option three!\n")
         input("Return to continue...")
-    elif(selection == 4):
+    elif(selection == "4"):
         print("You selected Option four!\n")
+        input("Return to continue...")
+    elif(selection != "5"):
+        print("Please return to menu and select a digit from 1 to 5")
         input("Return to continue...")
 
 print("Bye!")
