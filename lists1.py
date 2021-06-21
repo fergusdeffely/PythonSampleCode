@@ -13,13 +13,13 @@ for number in numberList:
 print("Printing 3rd item...")
 print(numberList[2])
 
-# add an item to the list
+# add an item to the end of the list
 numberList.append(6)
 print("Add item...")
 print(numberList)
 
 # add another list
-print("Add list...")
+print("Adding another list...")
 numberList.extend([7, 8, 9])
 print(numberList)
 
