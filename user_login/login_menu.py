@@ -1,6 +1,11 @@
+from user import User
 from menu import Menu
+from user_menu import UserMenu
 
 class LoginMenu(Menu):
+
+    # show method provides the logic for displaying the menu options, 
+    # getting the user's selection and verifying that selections are valid
 
     def show(self):
         selection = "0"
@@ -15,6 +20,8 @@ class LoginMenu(Menu):
                 print(f"Invalid menu option [{selection}]. Press return to try again.")
                 input()
 
+    # print the menu and retrieve the users selection and taking the appropriate 
+    # action if the selection is one of the supported options
 
     def get_selection(self):
         print("Menu options:")
@@ -32,11 +39,22 @@ class LoginMenu(Menu):
         return selection
 
     def login(self):
-        print("login")
-        phone_number = input("Please enter your phone number: ")
-        self.validate_phone_number(phone_number)
-        self.check_phone_number(phone_number)
-        input("Return to continue:")
+        print("User login")
+        print("==========\n")        
+        username = input("Please enter your phone number: ")        
+        password = input("Password: ")
+        email_address = f"hardcoded@domain.com"
+
+        self.validate_phone_number(username)
+        self.check_phone_number(username)
+
+        user = User(username, password, email_address, 9)
+
+        input("Login successful - Return to continue to main menu:")
+
+        user_menu = UserMenu()
+        user_menu.show(user)
+
 
     def register_user(self):
         print("register user")

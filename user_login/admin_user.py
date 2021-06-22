@@ -2,7 +2,10 @@ from user import User
 
 class AdminUser(User):
 
+    # see comments in user.py on initialisers
     def __init__(self, username, password, employee_number, email_address, id):
+        #super(AdminUser, self).__init__(username, password, email_address, id)
+
         self.username = username
         self.password = password
         self.employee_number = employee_number
