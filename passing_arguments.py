@@ -45,8 +45,10 @@ print(num)
 # are passed as arguments to functions, they are 'passed by value'. 
 # This means that any changes to that variable remain local to the 
 # function are are discarded once the function exits. 
+# Pass by value is how Python treats arguments that are numbers, strings, 
+# dates (and some other types beyond the scope of this module)
 
-
+print()
 print("Pass by reference")
 print("=================")
 
